@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>SVN to TFS 2012 (Migration)</title>
+  <slug>svn-to-tfs-2012-migration</slug>
+  <author>abelgaxiola</author>
+  <pubDate>2013-10-16 05:08:08</pubDate>
+  <lastModified>2013-10-16 05:08:08</lastModified>
+  <excerpt>I have been using SVN at work as a version repository for many years now.  Recently it was decided that we are going to use TFS 2012 and that our projects needed to be migrated from SVN to TFS preserving as much history as possible.</excerpt>
+  <content>&lt;p style="color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif; font-size: small;"&gt;I have been using SVN at work as a version repository for many years now.  Recently it was decided that we are going to use TFS 2012 and that our projects needed to be migrated from SVN to TFS preserving as much history as possible.  So I started my research by searching the internet’s most common forums for technical questions.  Here is what I found and how I did it:&lt;/span&gt;&lt;/p&gt;&lt;p style="color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; padding-left: 30px;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif; font-size: small;"&gt;1.  Install an SVN server and point it to your SVN repositories.  I had to do this because our repositories are all files based.&lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: arial, helvetica, sans-serif; font-size: small;"&gt;2. Install Git and migrate the SVN projects to git repositories.&lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: arial, helvetica, sans-serif; font-size: small;"&gt;3. Install Git-tf and migrate the git repositories to TFS 2012&lt;/span&gt;&lt;/p&gt;&lt;p style="color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif; font-size: small;"&gt;At the end it all sounds as simple as following a three step process – which it is – but the reality is that each of the steps can be a project within itself&lt;/span&gt;&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category>Technical</category>
+    <category>Information</category>
+  </categories>
+  <comments></comments>
+</post>
