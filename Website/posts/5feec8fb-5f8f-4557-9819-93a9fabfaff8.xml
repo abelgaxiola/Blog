@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<post>
+  <title>Calling Web API with AngularJS</title>
+  <slug>calling-web-api-with-angularjs</slug>
+  <author>abelgaxiola</author>
+  <pubDate>2014-09-17 03:46:17</pubDate>
+  <lastModified>2014-09-17 03:46:17</lastModified>
+  <excerpt>Been working with Web API for the entire week and decided to use angular as a test to see how hard/easy it would be to access the API from within an HTML page hosted on a different server.</excerpt>
+  <content>&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;Been working with Web API for the entire week and decided to use angular as a test to see how hard/easy it would be to access the API from within an HTML page hosted on a different server.  Now, I’m new to AngularJS and also new to Web API so things do not come naturally to me.  Fortunately there is plenty of help online in the form of documentation, user groups, videos, etc.&lt;/p&gt;&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;At the end it turned out to be easier than expected, and like everything else I’ve done with AngularJS I was blown away by the simplicity.  The Angular code that did the trick was the following:&lt;/p&gt;&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;&lt;/p&gt;&lt;blockquote style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;&lt;p style="font-size: 17.5px; line-height: 1.25;"&gt;(function () {&lt;br /&gt;'use strict';&lt;br /&gt;var app = angular.module('app', []);&lt;br /&gt;var MainController = function($scope, $http) {&lt;br /&gt;        $scope.message = "Testing Web API with AngularJS";&lt;br /&gt;        $scope.simpleTest = function () {&lt;br /&gt;getResults("&lt;a href="https://web.archive.org/web/20160316164820/http://website/api/results%22);"&gt;http://website/api/results");&lt;/a&gt;&lt;br /&gt;        };&lt;br /&gt;var onSuccess = function (response) {&lt;br /&gt;            $scope.results = response.data;&lt;br /&gt;        };&lt;br /&gt;var onError = function (reason) {&lt;br /&gt;            $scope.error = "Could not fetch the results";&lt;br /&gt;        };&lt;br /&gt;var getResults = function (url) {&lt;br /&gt;            $http.get(url)&lt;br /&gt;            .then(onSuccess, onError);&lt;br /&gt;        }&lt;br /&gt;    };&lt;br /&gt;app.controller('MainController', ["$scope", "$http", MainController]);&lt;br /&gt;})();&lt;/p&gt;&lt;/blockquote&gt;&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;&lt;/p&gt;&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;Where I would call the getResults() function using a ng-click directive.  I wish I could take credit for the code but like everything else that I do when learning something new: I copied it from a sample in &lt;a href="https://web.archive.org/web/20160316164820/http://plnkr.co/"&gt;http://plnkr.co&lt;/a&gt;&lt;/p&gt;&lt;p style="font-family: Alegreya, georgia, Verdana, Geneva, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 22px;"&gt;Learning something new is always fun…&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories>
+    <category> ASP.NET</category>
+    <category>AngularJS</category>
+    <category> Development</category>
+    <category>JavaScript</category>
+    <category>Web API</category>
+    <category>Technical</category>
+  </categories>
+  <comments></comments>
+</post>
